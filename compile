@@ -1,0 +1,14 @@
+# clang
+#gcc server.c -o server.o -march=native
+#gcc server.c -o server.o
+# ↑これは実行できる
+# ./server.o 8001
+#g++  server.c -o server.o
+gcc -dynamiclib server.c -o server.o
+# こ↑れは実行できない
+
+# swift
+xcrun swiftc -c main.swift -import-objc-header cliinput-Bridging-Header.h -F /System/Library/Frameworks -I /usr/include
+
+# link?
+xcrun swiftc -o sgift server.o main.o
